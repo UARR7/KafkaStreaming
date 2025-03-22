@@ -1,0 +1,107 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes aurora {
+  0% {
+    transform: translate(0, 0) rotate(0);
+  }
+  100% {
+    transform: translate(100px, 50px) rotate(360deg);
+  }
+}
+
+.aurora-bg::before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    rgba(88, 175, 223, 0.3),
+    rgba(182, 255, 241, 0.3),
+    rgba(126, 87, 194, 0.3),
+    rgba(159, 168, 218, 0.3)
+  );
+  filter: blur(60px);
+  animation: aurora 15s linear infinite;
+  z-index: -1;
+}
+
+.slide-in {
+  animation: slideIn 0.5s ease-out forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+} */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes aurora {
+  0% {
+    transform: translate(0, 0) rotate(0);
+  }
+  100% {
+    transform: translate(100px, 50px) rotate(360deg);
+  }
+}
+
+.aurora-bg::before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    rgba(88, 175, 223, 0.3),
+    rgba(182, 255, 241, 0.3),
+    rgba(126, 87, 194, 0.3),
+    rgba(159, 168, 218, 0.3)
+  );
+  filter: blur(60px);
+  animation: aurora 15s linear infinite;
+  z-index: -1;
+}
+
+.slide-in {
+  animation: slideIn 0.5s ease-out forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
